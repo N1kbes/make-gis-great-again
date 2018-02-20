@@ -25,7 +25,7 @@ const lang = {
   pt: 'Ver imagem'
 };
 
-const localizedViewImage = lang[(lang[navigator.language] ? navigator.language : 'en')];
+const localizedViewImage = lang[navigator.language.slice(0,2) || 'en'];
 
 function addButton(node) {
   if (node.nodeType === Node.ELEMENT_NODE) {
